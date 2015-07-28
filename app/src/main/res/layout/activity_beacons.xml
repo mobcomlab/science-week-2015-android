@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.Beacons">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Searching..."
+        android:id="@+id/status"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff696969" />
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/circle_a"
+        android:src="@drawable/circle_red"
+        android:layout_alignTop="@+id/circle_b"
+        android:layout_toLeftOf="@+id/circle_b"
+        android:layout_toStartOf="@+id/circle_b"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/circle_b"
+        android:src="@drawable/circle_red"
+        android:layout_below="@+id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/circle_c"
+        android:src="@drawable/circle_red"
+
+        android:layout_marginLeft="35dp"
+        android:layout_alignTop="@+id/circle_b"
+        android:layout_toRightOf="@+id/circle_b"
+        android:layout_toEndOf="@+id/circle_b"
+        android:layout_marginStart="35dp" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/wifi"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="in SC2..."
+        android:id="@+id/title"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/circle_b"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Find the ..."
+        android:id="@+id/description"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowAnimationStyle">@style/MyAnimation2.Window</item>-->
+        <item name="colorPrimary">#F44336</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">#B71C1C</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#9E9E9E</item>
+
+
+    </style>
+
+    <style name="AppSubTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+        <item name="colorPrimary">#F44336</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">#B71C1C</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#9E9E9E</item>
+
+
+    </style>
+
+
+
+    <style name="MyAnimation" />
+
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/side_right_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_left_right</item>
+    </style>
+
+    <style name="MyAnimation2.Window" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/side_right_left</item>
+        <item name="android:windowExitAnimation">@null</item>
+
+    </style>
+
+</resources>

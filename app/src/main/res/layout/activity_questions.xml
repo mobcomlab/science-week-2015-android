@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.example.sanuphap.scienceweeks.uiQuestion.Questions">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/question"
+        android:text="การกระทำในข้อใดที่ถือว่ามีเหตุผลตามหลักวิทยาศาสตร์"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:padding="15dp"
+        android:background="#ffaaaaaa" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="xxxxxxxxxxx"
+        android:id="@+id/choiceA"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/selected"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ออออออออออออออออออออออออออออออออออออ"
+        android:id="@+id/choiceB"
+        android:layout_below="@+id/choiceA"
+        android:layout_alignLeft="@+id/choiceA"
+        android:layout_alignStart="@+id/choiceA"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/selected"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="กกกกกกกก"
+        android:id="@+id/choiceC"
+        android:layout_below="@+id/choiceB"
+        android:layout_alignLeft="@+id/choiceB"
+        android:layout_alignStart="@+id/choiceB"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/selected"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:id="@+id/choiceD"
+        android:layout_below="@+id/choiceC"
+        android:layout_alignLeft="@+id/choiceC"
+        android:layout_alignStart="@+id/choiceC"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/selected"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:longClickable="false" />
+
+</RelativeLayout>
