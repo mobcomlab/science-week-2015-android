@@ -1,23 +1,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent" android:paddingLeft="8dp"
+    android:paddingRight="8dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.sanuphap.scienceweeks.row_list">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/circle_a"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/img_circle"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/find_fail"
-        android:paddingLeft="0dp"
-        android:paddingTop="10dp"
+        android:src="@drawable/scanner_circle"
 
-        />
+        android:paddingLeft="0dp"
+
+        android:padding="0dp"
+        android:background="@drawable/beacon_circle" />
 
     <TextView
         android:layout_width="64dp"
@@ -28,9 +31,9 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="12dp"
-        android:layout_below="@+id/circle_a"
-        android:layout_alignRight="@+id/circle_a"
-        android:layout_alignEnd="@+id/circle_a"
+        android:layout_below="@+id/img_circle"
+        android:layout_alignRight="@+id/img_circle"
+        android:layout_alignEnd="@+id/img_circle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

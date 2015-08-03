@@ -70,7 +70,7 @@ public class DatabaseManager {
         quest.setTitle(title);
         quest.setIcon(icon);
         quest.setColor(color);
-        quest.setStatus(status);
+        /*quest.setStatus(status);*/
 
         realm.commitTransaction();
 

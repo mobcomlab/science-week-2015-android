@@ -41,7 +41,7 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
         public ViewHolder(View itemView) {
             super(itemView);
             sampleNameQuest = (TextView) itemView.findViewById(R.id.sample_name_Quest);
-            image = (ImageView) itemView.findViewById(R.id.circle_a);
+            image = (ImageView) itemView.findViewById(R.id.img_circle);
         }
     }
     @Override
@@ -55,27 +55,47 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
     public void onBindViewHolder(ViewHolder holder, int position) {
         final QuestModel objQuest = data.get(position);
 
-// Bind data
-
-
         holder.sampleNameQuest.setText(objQuest.getTitle());
 
+        /*COLOR CIRCLE HERE*/
+        switch (objQuest.getColor()) {
+            case "yellow":
+                holder.image.setBackgroundResource(R.drawable.question_circle);
+                break;
+            case "green":
+                holder.image.setBackgroundResource(R.drawable.scanner_circle);
+                break;
+            case "blue":
+                holder.image.setBackgroundResource(R.drawable.beacon_circle);
+                break;
+        }
 
         if (objQuest.getStatus()==0){
-            if(objQuest.getType()==3)
-                holder.image.setImageResource(R.drawable.find_fail);
-            else if (objQuest.getType()==1)
-                holder.image.setImageResource(R.drawable.que_fail);
-            else if (objQuest.getType()==2)
-                holder.image.setImageResource(R.drawable.qr_fail);
+            switch (objQuest.getIcon()) {
+                case "quest":
+                    holder.image.setImageResource(R.drawable.qa);
+                    break;
+                case "qr":
+                    holder.image.setImageResource(R.drawable.qr);
+                    break;
+                case "beacon":
+                    holder.image.setImageResource(R.drawable.find);
+                    break;
+            }
+
 
         }else  if (objQuest.getStatus()==1){
-            if(objQuest.getType()==3)
-                holder.image.setImageResource(R.drawable.find_pass);
-            else if (objQuest.getType()==1)
-                holder.image.setImageResource(R.drawable.que_pass);
-            else if (objQuest.getType()==2)
-                holder.image.setImageResource(R.drawable.qr_pass);
+            switch (objQuest.getIcon()) {
+                case "quest":
+                    holder.image.setImageResource(R.drawable.qa_clear);
+                    break;
+                case "qr":
+                    holder.image.setImageResource(R.drawable.qr_clear);
+                    break;
+                case "beacon":
+                    holder.image.setImageResource(R.drawable.find_clear);
+                    break;
+            }
 
 
         }
@@ -86,60 +106,23 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
             public void onClick(View v) {
 
                 if (objQuest.getType() == 1) {
-                    if (objQuest.getId() == 9) {
-                        Intent intent = new Intent(context, Questions.class);
-                        intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }else if (objQuest.getId() == 10) {
-                        Intent intent = new Intent(context, Questions.class);
-                        intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }else if (objQuest.getId() == 11) {
-                        Intent intent = new Intent(context, Questions.class);
-                        intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }else if (objQuest.getId() == 12) {
-                        Intent intent = new Intent(context, Questions.class);
-                        intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }
+                    Intent intent = new Intent(context, Questions.class);
+                    intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
+                    ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
+
 
                 } else if (objQuest.getType() == 2) {
-                    if (objQuest.getId() == 1) {
-                        Intent intent = new Intent(context, ScannerCode.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 1);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId() == 2) {
-                        Intent intent = new Intent(context, ScannerCode.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 2);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId() == 3) {
-                        Intent intent = new Intent(context, ScannerCode.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 3);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }
+
+                    Intent intent = new Intent(context, ScannerCode.class);
+                    intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
+                    ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
+
                 } else if (objQuest.getType() == 3) {
-                    if (objQuest.getId() == 4) {
-                        Intent intent = new Intent(context, Beacons.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 4);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId() == 5) {
-                        Intent intent = new Intent(context, Beacons.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 5);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId() == 6) {
-                        Intent intent = new Intent(context, Beacons.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 6);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId() == 7) {
-                        Intent intent = new Intent(context, Beacons.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 7);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    } else if (objQuest.getId()==8) {
-                        Intent intent = new Intent(context, Beacons.class);
-                        intent.putExtra(QuestContents.QUEST_ID, 8);
-                        ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
-                    }
+
+                    Intent intent = new Intent(context, Beacons.class);
+                    intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
+                    ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
+
                 }
             }
         });

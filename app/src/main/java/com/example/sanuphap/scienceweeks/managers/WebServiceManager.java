@@ -19,7 +19,7 @@ import org.json.JSONObject;
  * Created by sAnuphap on 24/7/2558.
  */
 public class WebServiceManager {
-    private final static String QUEST_URL = "http://192.168.69.1:8888/api/quests";
+    private final static String QUEST_URL = "http://192.168.215.1:8888/api/quests";
 
     final Context context;
     final WebServiceCallbackListener listener;
