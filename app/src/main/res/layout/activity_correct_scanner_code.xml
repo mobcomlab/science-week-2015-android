@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="225dp"
         android:layout_height="225dp"
-        android:id="@+id/imageView"
+        android:id="@+id/imgwifi"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/found" />
@@ -20,7 +20,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="CORRECT"
         android:id="@+id/text_corect"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/imgwifi"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="25dp"

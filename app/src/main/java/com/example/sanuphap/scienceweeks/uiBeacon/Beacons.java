@@ -3,6 +3,7 @@ package com.example.sanuphap.scienceweeks.uiBeacon;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.RemoteException;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
@@ -40,6 +41,9 @@ public class Beacons extends AppCompatActivity {
     String gameId ="";
 
     Region reg;
+    int num_run=1;
+
+    String[] array_description;
 
     private BeaconManager beaconManager;
     private List<BeaconDevice> beaconDevices;
@@ -52,9 +56,8 @@ public class Beacons extends AppCompatActivity {
         setContentView(R.layout.activity_beacons);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setIcon(R.mipmap.ic_launcher);
+        actionBar.setIcon(R.mipmap.icon_beacon);
 
 
         beaconDevices = new ArrayList<BeaconDevice>();
@@ -72,12 +75,50 @@ public class Beacons extends AppCompatActivity {
         title =(TextView)  findViewById(R.id.title);
         description =(TextView) findViewById(R.id.description);
 
+        title.setText(databaseManager.getQuest(questId).getText());
+
+        array_description=databaseManager.getQuest(questId).getOther().split(",");
+        String getStringDescription = null;
+        for (String anArray_description : array_description) {
+            if (getStringDescription == null) {
+                getStringDescription = anArray_description+"\n";
+            } else {
+                getStringDescription = getStringDescription + anArray_description+"\n";
+            }
+        }
+        description.setText(getStringDescription);
+
+
+
+
+
         final ImageView circle_a = (ImageView) findViewById(R.id.circle_a);
         final ImageView circle_b = (ImageView) findViewById(R.id.circle_b);
         final ImageView circle_c = (ImageView) findViewById(R.id.circle_c);
 
-        title.setText(databaseManager.getQuest(questId).getText());
-        description.setText(databaseManager.getQuest(questId).getOther());
+        final Handler localHandler = new Handler();
+        localHandler.postDelayed(new Runnable(){
+            public void run() {
+                final ImageView dice = (ImageView) findViewById(R.id.imgwifi);
+                if (num_run==1){
+                    dice.setImageResource(R.drawable.ani1);
+                    num_run++;
+                }else if (num_run==2){
+                    dice.setImageResource(R.drawable.ani2);
+                    num_run++;
+                }else if (num_run==3){
+                    dice.setImageResource(R.drawable.ani3);
+                    num_run++;
+                }else if (num_run==4){
+                    dice.setImageResource(R.drawable.ani4);
+                    num_run++;
+                }else if (num_run==5){
+                    num_run=1;
+                }
+                localHandler.postDelayed(this, 500);
+
+            }
+        },500);
 
         reg = new Region(UUID.fromString("f7826da6-4fa2-4e98-8024-bc5b71e0893e"),50138,2445);
         beaconManager = BeaconManager.newInstance(this);

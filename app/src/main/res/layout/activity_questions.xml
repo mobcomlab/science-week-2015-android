@@ -7,81 +7,107 @@
     tools:context="com.example.sanuphap.scienceweeks.uiQuestion.Questions">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/question"
-        android:text="การกระทำในข้อใดที่ถือว่ามีเหตุผลตามหลักวิทยาศาสตร์"
+        android:text="คำถาม"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:layout_alignParentTop="true"
-        android:padding="15dp"
-        android:background="#ffaaaaaa" />
+        android:paddingLeft="5dp"
+
+        android:paddingRight="5dp"
+
+        android:gravity="center|center_vertical"
+        android:layout_below="@+id/nuber_order"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="xxxxxxxxxxx"
+        android:text="คำตอบ 1 "
         android:id="@+id/choiceA"
-        android:layout_below="@+id/question"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:gravity="center_vertical"
+        android:gravity="center|center_vertical"
         android:background="@drawable/selected"
-        android:textColor="#ff000000"
+        android:textColor="#ff272727"
         android:textSize="14sp"
         android:paddingLeft="10dp"
-        android:longClickable="false" />
+        android:longClickable="false"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="ออออออออออออออออออออออออออออออออออออ"
+        android:text="คำตอบ 2 "
         android:id="@+id/choiceB"
         android:layout_below="@+id/choiceA"
         android:layout_alignLeft="@+id/choiceA"
         android:layout_alignStart="@+id/choiceA"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:gravity="center|center_vertical"
         android:background="@drawable/selected"
-        android:textColor="#ff000000"
+        android:textColor="#ff272727"
         android:textSize="14sp"
         android:paddingLeft="10dp"
         android:longClickable="false" />
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="กกกกกกกก"
+        android:text="คำตอบ 3 "
         android:id="@+id/choiceC"
         android:layout_below="@+id/choiceB"
         android:layout_alignLeft="@+id/choiceB"
         android:layout_alignStart="@+id/choiceB"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:gravity="center|center_vertical"
         android:background="@drawable/selected"
-        android:textColor="#ff000000"
+        android:textColor="#ff272727"
         android:textSize="14sp"
         android:paddingLeft="10dp"
         android:longClickable="false" />
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:text="คำตอบ 4 "
         android:id="@+id/choiceD"
         android:layout_below="@+id/choiceC"
         android:layout_alignLeft="@+id/choiceC"
         android:layout_alignStart="@+id/choiceC"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:gravity="center|center_vertical"
         android:background="@drawable/selected"
-        android:textColor="#ff000000"
+        android:textColor="#ff272727"
         android:textSize="14sp"
         android:paddingLeft="10dp"
         android:longClickable="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1/4"
+        android:id="@+id/nuber_order"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|center_vertical"
+        android:background="#222b33"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:background="#ff313131"
+        android:layout_marginTop="0dp" />
 
 </RelativeLayout>

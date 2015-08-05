@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Vibrator;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,17 +23,20 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
     ScannerView scannerView;
     ScannerFragment scannerFragment;
     Intent intent;
-
-    String gameId;
     int questId;
     String codeId;
-    final int PASS=1;
-    final int FAIL=0;
+    String string_des;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner_code);
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.icon_scanner);
 
         final DatabaseManager databaseManager = new DatabaseManager(this);
 
@@ -56,8 +60,16 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
         codeId = databaseManager.getQuest(questId).getAnswer();
 
         TextView text_description = (TextView) findViewById(R.id.description_content);
-        text_description.setText(descriptionArray[0]+"\n"+descriptionArray[1]+"\n"+descriptionArray[2]);
+        for (String aDescriptionArray : descriptionArray) {
+            if (string_des==null) {
+                string_des =  aDescriptionArray + "\n";
+            }else{
+                string_des = string_des+aDescriptionArray + "\n";
 
+            }
+        }
+
+        text_description.setText(string_des);
         TextView text_title = (TextView) findViewById(R.id.title_content);
         text_title.setText(titles);
 

@@ -3,6 +3,7 @@ package com.example.sanuphap.scienceweeks.uiQuestion;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ public class Questions extends AppCompatActivity {
     TextView display_choicesB;
     TextView display_choicesC;
     TextView display_choicesD;
+    TextView number;
 
 
     int questId = 0;
@@ -31,7 +33,6 @@ public class Questions extends AppCompatActivity {
     String[] choices;
 
 
-    String[] choicesArray;
 
 
     int score;
@@ -44,19 +45,29 @@ public class Questions extends AppCompatActivity {
     int order=0;
 
     DatabaseManager databaseManager;
+
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
+        databaseManager = new DatabaseManager(this);
 
         intent = getIntent();
         questId = intent.getIntExtra(QuestContents.QUEST_ID, 0);
 
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.icon_question);
+
+        setTitle(databaseManager.getQuest(questId).getTitle());
+
+
+
         random = new Random();
 
-        databaseManager = new DatabaseManager(this);
 
         questions = databaseManager.getQuest(questId).getText().split(":");
         answers = databaseManager.getQuest(questId).getAnswer().split(":");
@@ -71,36 +82,40 @@ public class Questions extends AppCompatActivity {
         display_choicesB = (TextView) findViewById(R.id.choiceB);
         display_choicesC = (TextView) findViewById(R.id.choiceC);
         display_choicesD = (TextView) findViewById(R.id.choiceD);
+        number =(TextView) findViewById(R.id.nuber_order);
 
         num_random = random.nextInt(4);
-            setTitle(databaseManager.getQuest(questId).getTitle());
-        display_questions.setText(number_order + ".\t" + questions[order]);
+
+
+
+        number.setText(number_order + " / " + questions.length);
+        display_questions.setText(questions[order]);
         String Choice = allChoices[order];
         choices = Choice.split(",");
 
         if (num_random==0){
-            display_choicesA.setText("ก. \t"+answers[order]);
-            display_choicesB.setText("ข. \t"+choices[0]);
-            display_choicesC.setText("ค. \t"+choices[1]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(answers[order]);
+            display_choicesB.setText(choices[0]);
+            display_choicesC.setText(choices[1]);
+            display_choicesD.setText(choices[2]);
 
         }else  if (num_random==1){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+answers[order]);
-            display_choicesC.setText("ค. \t"+choices[1]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(answers[order]);
+            display_choicesC.setText(choices[1]);
+            display_choicesD.setText(choices[2]);
 
         }else if (num_random==2){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+choices[1]);
-            display_choicesC.setText("ค. \t"+answers[order]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(choices[1]);
+            display_choicesC.setText(answers[order]);
+            display_choicesD.setText(choices[2]);
 
         }else if (num_random==3){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+choices[1]);
-            display_choicesC.setText("ค. \t"+choices[2]);
-            display_choicesD.setText("ง. \t"+answers[order]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(choices[1]);
+            display_choicesC.setText(choices[2]);
+            display_choicesD.setText(answers[order]);
 
         }
 
@@ -194,34 +209,34 @@ public class Questions extends AppCompatActivity {
 
     public void readQuestions(){
         num_random = random.nextInt(4);
-
-        display_questions.setText(number_order+".\t"+questions[order]);
+        number.setText(number_order+" / "+questions.length);
+        display_questions.setText(questions[order]);
         String Choice = allChoices[order];
         choices = Choice.split(",");
 
         if (num_random==0){
-            display_choicesA.setText("ก. \t"+answers[order]);
-            display_choicesB.setText("ข. \t"+choices[0]);
-            display_choicesC.setText("ค. \t"+choices[1]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(answers[order]);
+            display_choicesB.setText(choices[0]);
+            display_choicesC.setText(choices[1]);
+            display_choicesD.setText(choices[2]);
 
         }else  if (num_random==1){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+answers[order]);
-            display_choicesC.setText("ค. \t"+choices[1]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(answers[order]);
+            display_choicesC.setText(choices[1]);
+            display_choicesD.setText(choices[2]);
 
         }else if (num_random==2){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+choices[1]);
-            display_choicesC.setText("ค. \t"+answers[order]);
-            display_choicesD.setText("ง. \t"+choices[2]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(choices[1]);
+            display_choicesC.setText(answers[order]);
+            display_choicesD.setText(choices[2]);
 
         }else if (num_random==3){
-            display_choicesA.setText("ก. \t"+choices[0]);
-            display_choicesB.setText("ข. \t"+choices[1]);
-            display_choicesC.setText("ค. \t"+choices[2]);
-            display_choicesD.setText("ง. \t"+answers[order]);
+            display_choicesA.setText(choices[0]);
+            display_choicesB.setText(choices[1]);
+            display_choicesC.setText(choices[2]);
+            display_choicesD.setText(answers[order]);
 
         }
 

@@ -7,10 +7,16 @@
     <string name="title_activity_scanner_code">ScannerCode</string>
     <string name="title_activity_corect_scanner_code">CorectScannerCode</string>
 
-    <color name="gray">#2dc8c8c8</color>
-    <color name="black">#80808080</color>
+    <color name="click_gray">#2dc8c8c8</color>
+    <color name="click_black">#80808080</color>
+    <color name="choice">#9ea5ab</color>
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#ff9e9e9e</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
     <string name="title_activity_questions">Questions</string>
     <string name="title_activity_score_question">ScoreQuestion</string>
     <string name="title_activity_beacons">Beacons</string>
     <string name="title_activity_found_beacon">FoundBeacon</string>
+    <string name="title_activity_set_actionbar">setActionbar</string>
 </resources>

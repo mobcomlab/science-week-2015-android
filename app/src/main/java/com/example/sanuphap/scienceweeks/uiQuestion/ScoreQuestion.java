@@ -45,11 +45,11 @@ public class ScoreQuestion extends AppCompatActivity {
 
         if (sum>=50){
             TextView text_status = (TextView) findViewById(R.id.text_status);
-            text_status.setText("PASS");
+            text_status.setText(">> PASS <<");
             text_status.setTextColor(Color.GREEN);
         }else {
             TextView text_status = (TextView) findViewById(R.id.text_status);
-            text_status.setText("FAIL");
+            text_status.setText(">> FAIL <<");
             text_status.setTextColor(Color.RED);
         }
 

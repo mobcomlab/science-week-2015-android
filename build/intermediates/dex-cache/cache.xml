@@ -2,102 +2,11 @@
 <items version="2" >
 
     <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-fd123ea43364f6e97611a914d832181efdcd06ba.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-5a238c09cb71057655092a7299f45f801d061a53.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="381ed9690f3fcc50be3fee77a9ff5e69eb1cd11c">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-5eca08d70a108f5565c8c5512a4e110ae4082a2e.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-4756c6afa63cc41b85ecbcb0a9629c00add4f254.jar" />
-    </item>
-    <item
-        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.0\15f8abc7f1414bbffca8d32b73097223d3a83847\library-1.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="15f8abc7f1414bbffca8d32b73097223d3a83847">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\library-1.0.0-c0b4efb0fac941f9f6b8038f79b18ab2ce46d9a0.jar" />
-    </item>
-    <item
         jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\libs\core-3.1.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="908e18674f895e3e1fa8f4a954b8c637a23d2801">
         <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\core-3.1.0-064a281f1bb3701140e8ec41e3f9aedd4f77b3a3.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\eu.livotov.labs\camview\1.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="cb8c66080211594efc3429bd52c1fae39ca3886d">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-d105491463528b3251278556499a15721dc65dbc.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-9098102cbf92ae2fafd1a77c3a41e6b9ca87767f.jar" />
-    </item>
-    <item
-        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\io.realm\realm-android\0.80.3\7979d05ba7b919c53766bf98e31aaf0e9feb0590\realm-android-0.80.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7979d05ba7b919c53766bf98e31aaf0e9feb0590">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\realm-android-0.80.3-21ceded942e1bcb4a22b09ea9224db249b2acecc.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-2b89d3fef0d878b765a49f3111179a96e22b09b3.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-76f2c259dc7303b6fb6d6b329701fc4442c9760b.jar" />
-    </item>
-    <item
-        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient-android\4.3.3\39ba75b570e5f1535356e8a1bf920b1c6cc83a9a\httpclient-android-4.3.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="39ba75b570e5f1535356e8a1bf920b1c6cc83a9a">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\httpclient-android-4.3.3-56d43d08963bb58c4c5d91aef01b3ef6cffb1876.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\libs\core-3.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="908e18674f895e3e1fa8f4a954b8c637a23d2801">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\core-3.1.0-4a6daa63640accba3aaf8da7afa94f60bade5900.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="381ed9690f3fcc50be3fee77a9ff5e69eb1cd11c">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-065148e005aed05556f123863ef612024c1ef9b7.jar" />
     </item>
     <item
         jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
@@ -107,32 +16,18 @@
         <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-32f2f04fabf9afe49b1a76cd6a31e00ba246c307.jar" />
     </item>
     <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.kontakt.sdk.android\library\1.0.6\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="2d3c416fc64beae5776e4fbaf1a734ed72489175">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-5624dfd518d69db8ca0a213d15d747ea5d2d594a.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.kontakt.sdk.android\library\1.0.6\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="2d3c416fc64beae5776e4fbaf1a734ed72489175">
-        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-dc54d13a7de26adef1f82fb9996f1abc25b262f1.jar" />
-    </item>
-    <item
-        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-153e067ce0190d48d418f36bb461eb5e78042594.jar" />
-    </item>
-    <item
         jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\eu.livotov.labs\camview\1.0.3\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="cb8c66080211594efc3429bd52c1fae39ca3886d">
         <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-03e0715b9ebbc7cbf6e4197393c70588bf061733.jar" />
+    </item>
+    <item
+        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\io.realm\realm-android\0.80.3\7979d05ba7b919c53766bf98e31aaf0e9feb0590\realm-android-0.80.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7979d05ba7b919c53766bf98e31aaf0e9feb0590">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\realm-android-0.80.3-21ceded942e1bcb4a22b09ea9224db249b2acecc.jar" />
     </item>
     <item
         jar="C:\Users\sAnuphap\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
@@ -142,11 +37,116 @@
         <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-7ed800f983c6548d639abdc17bda1bcc6112ea94.jar" />
     </item>
     <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="381ed9690f3fcc50be3fee77a9ff5e69eb1cd11c">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-065148e005aed05556f123863ef612024c1ef9b7.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\eu.livotov.labs\camview\1.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="cb8c66080211594efc3429bd52c1fae39ca3886d">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-d105491463528b3251278556499a15721dc65dbc.jar" />
+    </item>
+    <item
+        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient-android\4.3.3\39ba75b570e5f1535356e8a1bf920b1c6cc83a9a\httpclient-android-4.3.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="39ba75b570e5f1535356e8a1bf920b1c6cc83a9a">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\httpclient-android-4.3.3-56d43d08963bb58c4c5d91aef01b3ef6cffb1876.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-4756c6afa63cc41b85ecbcb0a9629c00add4f254.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-5a238c09cb71057655092a7299f45f801d061a53.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.kontakt.sdk.android\library\1.0.6\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2d3c416fc64beae5776e4fbaf1a734ed72489175">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-dc54d13a7de26adef1f82fb9996f1abc25b262f1.jar" />
+    </item>
+    <item
         jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\com.kontakt.sdk\core-sdk\1.0.6\7760723199e4a9d45028b40e3f838754c29f83f1\core-sdk-1.0.6.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="7760723199e4a9d45028b40e3f838754c29f83f1">
         <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\core-sdk-1.0.6-c31e77a9bce188b38723e7a38d01184e864419dd.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-9098102cbf92ae2fafd1a77c3a41e6b9ca87767f.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-fd123ea43364f6e97611a914d832181efdcd06ba.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-153e067ce0190d48d418f36bb461eb5e78042594.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="381ed9690f3fcc50be3fee77a9ff5e69eb1cd11c">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-5eca08d70a108f5565c8c5512a4e110ae4082a2e.jar" />
+    </item>
+    <item
+        jar="C:\Users\sAnuphap\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.0\15f8abc7f1414bbffca8d32b73097223d3a83847\library-1.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="15f8abc7f1414bbffca8d32b73097223d3a83847">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\library-1.0.0-c0b4efb0fac941f9f6b8038f79b18ab2ce46d9a0.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-2b89d3fef0d878b765a49f3111179a96e22b09b3.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\com.kontakt.sdk.android\library\1.0.6\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2d3c416fc64beae5776e4fbaf1a734ed72489175">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\classes-5624dfd518d69db8ca0a213d15d747ea5d2d594a.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\ScienceWeeks\app\build\intermediates\exploded-aar\eu.livotov.labs\zxscanlib\2.0.1\jars\libs\core-3.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="908e18674f895e3e1fa8f4a954b8c637a23d2801">
+        <dex dex="D:\java\myApp\ScienceWeeks\app\build\intermediates\pre-dexed\debug\core-3.1.0-4a6daa63640accba3aaf8da7afa94f60bade5900.jar" />
+    </item>
+    <item
+        jar="D:\java\myApp\science-week-2015-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\java\myApp\science-week-2015-android\app\build\intermediates\pre-dexed\debug\classes-76f2c259dc7303b6fb6d6b329701fc4442c9760b.jar" />
     </item>
 
 </items>

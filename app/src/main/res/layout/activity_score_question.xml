@@ -7,65 +7,67 @@
     tools:context="com.example.sanuphap.scienceweeks.uiQuestion.ScoreQuestion">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="YOUR SCORE "
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:gravity="center|center_vertical"
+        android:background="#222b33"
+        android:textColor="#ffffffff" />
 
     <TextView
-        android:layout_width="220dp"
+        android:layout_width="260dp"
         android:layout_height="150dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00%"
         android:id="@+id/score_user"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
         android:textSize="60dp"
         android:textStyle="bold"
         android:gravity="center|center_vertical"
-        android:background="#ffffffff" />
+        android:background="#ffffffff"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="FAIL"
         android:id="@+id/text_status"
+        android:textStyle="bold"
+        android:textSize="50sp"
         android:layout_below="@+id/score_user"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:textStyle="bold"
-        android:textSize="55dp" />
+        android:gravity="center|center_vertical"
+        android:background="#222b33" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Play again"
         android:id="@+id/btn_again"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="32dp"
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_below="@+id/text_status"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp" />
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="80dp" />
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="SAVE"
         android:id="@+id/btn_save"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/btn_again"
-        android:layout_toRightOf="@+id/btn_again"
-        android:layout_toEndOf="@+id/btn_again" />
+        android:layout_below="@+id/text_status"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="80dp" />
 </RelativeLayout>
