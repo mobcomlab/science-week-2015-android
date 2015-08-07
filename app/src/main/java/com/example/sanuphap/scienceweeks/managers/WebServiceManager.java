@@ -20,7 +20,8 @@ import org.json.JSONObject;
  */
 public class WebServiceManager {
     private final static String QUEST_URL = "http://192.168.215.1:8888/api/quests";
-
+//ip: http://192.168.215.1:8888/api/quests
+//ip emu: http://192.168.2.178:8888/api/quests
     final Context context;
     final WebServiceCallbackListener listener;
 

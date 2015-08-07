@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.sanuphap.scienceweeks.R;
 import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
@@ -24,7 +25,10 @@ public class FoundBeacon extends AppCompatActivity {
         final DatabaseManager databaseManager = new DatabaseManager(this);
 
         intent = getIntent();
-        questId =intent.getIntExtra(QuestContents.QUEST_ID,0);
+        questId =intent.getIntExtra(QuestContents.QUEST_ID, 0);
+
+        TextView status = (TextView) findViewById(R.id.status);
+        status.setText(databaseManager.getQuest(questId).getText());
 
         Button btn_close = (Button) findViewById(R.id.btn_close);
         btn_close.setOnClickListener(new View.OnClickListener() {

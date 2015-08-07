@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Page Beacon-->
+    <dimen name="wifi_image_width">100dp</dimen>
+    <dimen name="font_size_status_beacon">17sp</dimen>
+    <dimen name="size_scanner">180dp</dimen>
+</resources>

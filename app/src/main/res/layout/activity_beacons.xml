@@ -1,10 +1,26 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:paddingLeft="0dp"
-    android:paddingRight="0dp"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="0dp"
-    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.Beacons">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.Beacons"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Beacon"
+        android:id="@+id/title"
+        android:gravity="center|center_vertical"
+        android:background="#222b33"
+        android:textColor="#ffffffff"  />
+
+    <ImageView
+        android:layout_width="@dimen/wifi_image_width"
+        android:layout_height="@dimen/wifi_image_width"
+        android:id="@+id/imgwifi"
+        android:src="@drawable/ani4" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,97 +29,73 @@
         android:text="Searching..."
         android:id="@+id/status"
         android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_below="@+id/imgwifi"
-        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/font_size_status_beacon"
         android:textColor="#ff696969"
         android:layout_marginTop="5dp" />
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:id="@+id/circle_a"
-        android:src="@drawable/circle_red"
-        android:layout_alignTop="@+id/circle_b"
-        android:layout_toLeftOf="@+id/circle_b"
-        android:layout_toStartOf="@+id/circle_b"
-        android:layout_marginRight="35dp"
-        android:layout_marginEnd="35dp" />
 
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:id="@+id/circle_b"
-        android:src="@drawable/circle_red"
-        android:layout_below="@+id/status"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:id="@+id/circle_c"
-        android:src="@drawable/circle_red"
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/circle_a"
+            android:src="@drawable/circle_red"
+            android:layout_gravity="center_horizontal" />
 
-        android:layout_marginLeft="35dp"
-        android:layout_alignTop="@+id/circle_b"
-        android:layout_toRightOf="@+id/circle_b"
-        android:layout_toEndOf="@+id/circle_b"
-        android:layout_marginStart="35dp" />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/circle_b"
+            android:src="@drawable/circle_red"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/imgwifi"
-        android:src="@drawable/ani4"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/circle_c"
+            android:src="@drawable/circle_red" />
+    </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/circle_a"
         android:id="@+id/footer"
-        android:layout_alignParentBottom="true"
         android:background="#3a1d252c"
+        android:orientation="vertical"
         android:layout_marginTop="30dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/lable_description"
             android:text="คำอธิบาย"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:padding="5dp"
+            android:gravity="center_horizontal"
             android:textStyle="bold"
             android:textIsSelectable="false"
-            android:textColor="#ff000000" />
+            android:textColor="#ff000000"
+            android:textSize="15sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="in SC2...."
-            android:id="@+id/title"
-            android:layout_below="@+id/lable_description"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Find the ..."
+            android:text="description"
             android:id="@+id/description"
-            android:layout_below="@+id/title"
-            android:layout_alignLeft="@+id/title"
-            android:layout_alignStart="@+id/title"
-            android:textSize="12sp" />
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textSize="13sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

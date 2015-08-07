@@ -1,6 +1,7 @@
 package com.example.sanuphap.scienceweeks.uiBeacon;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Handler;
@@ -8,6 +9,9 @@ import android.os.RemoteException;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +36,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import eu.livotov.zxscan.ScannerView;
+
 public class Beacons extends AppCompatActivity {
     private static final int REQUEST_CODE_ENABLE_BLUETOOTH = 1;
     private static final int REQUEST_CODE_CONNECT_TO_DEVICE = 2;
@@ -39,7 +45,7 @@ public class Beacons extends AppCompatActivity {
 
     int questId;
     String gameId ="";
-
+    DatabaseManager databaseManager;
     Region reg;
     int num_run=1;
 
@@ -54,22 +60,43 @@ public class Beacons extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacons);
+        databaseManager = new DatabaseManager(this);
+        myIntent = getIntent();
+        questId = myIntent.getIntExtra(QuestContents.QUEST_ID,0);
 
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setIcon(R.mipmap.icon_beacon);
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                actionBar.setIcon(R.mipmap.icon_question);
+                break;
+            case "qr":
+                actionBar.setIcon(R.mipmap.icon_scanner);
+                break;
+            case "beacon":
+                actionBar.setIcon(R.mipmap.icon_beacon);
+                break;
+            case "math":
+                actionBar.setIcon(R.mipmap.icon_math);
+                break;
+            case "maze":
+                actionBar.setIcon(R.mipmap.icon_maze);
+                break;
+            case "mobcom":
+                actionBar.setIcon(R.mipmap.icon_mcl);
+                break;
+        }
 
 
         beaconDevices = new ArrayList<BeaconDevice>();
-        final DatabaseManager databaseManager = new DatabaseManager(this);
 
 
 
-        myIntent = getIntent();
 
-        questId = myIntent.getIntExtra(QuestContents.QUEST_ID,0);
 
-        setTitle(databaseManager.getQuest(questId).getTitle() +" ("+databaseManager.getQuest(questId).getAnswer()+")");
+
+        setTitle(databaseManager.getQuest(questId).getTitle());
 
         status =(TextView) findViewById(R.id.status);
         title =(TextView)  findViewById(R.id.title);
@@ -180,10 +207,7 @@ public class Beacons extends AppCompatActivity {
                                     circle_c.setImageResource(R.drawable.circle_red);
                                 }
                                 if (getBeacon.getAccuracy() < 0.2) {
-                                    myIntent = new Intent(Beacons.this, FoundBeacon.class);
-                                    myIntent.putExtra(QuestContents.QUEST_ID, questId);
-                                    startActivity(myIntent);
-                                    finish();
+                                    toCorrect();
                                 }
                             } else {
                                 circle_a.setImageResource(R.drawable.circle_red);
@@ -284,6 +308,63 @@ public class Beacons extends AppCompatActivity {
         } catch (RemoteException e) {
             Toast.makeText(Beacons.this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void toCorrect(){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.custom_dialog);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                image.setImageResource(R.drawable.qa_clear);
+                break;
+            case "qr":
+                image.setImageResource(R.drawable.qr_clear);
+                break;
+            case "beacon":
+                image.setImageResource(R.drawable.find_clear);
+                break;
+            case "math":
+                image.setImageResource(R.drawable.math_clear);
+                break;
+            case "maze":
+                image.setImageResource(R.drawable.maze_clear);
+                break;
+            case "mobcom":
+                image.setImageResource(R.drawable.mcl_clear);
+                break;
+        }
+
+        TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
+        text_status.setText("YOUR STATUS : CORRECT");
+
+        Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                databaseManager.UpdateStatus(questId, 1);
+                Toast.makeText(Beacons.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+                finish();
+
+            }
+        });
+
+        Button btn_again =(Button) dialog.findViewById(R.id.btn_playagain);
+        btn_again.setText("ยกเลิก");
+        btn_again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.dismiss();
+                Toast.makeText(Beacons.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+        dialog.show();
     }
 
 }

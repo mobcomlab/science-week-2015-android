@@ -2,67 +2,70 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="0dp"
     android:paddingBottom="0dp"
     tools:context="com.example.sanuphap.scienceweeks.uiScanner.ScannerCode">
 
     <FrameLayout
         android:id="@+id/scanner_fragment"
-        android:layout_width="250dp"
-        android:layout_height="225dp"
+        android:layout_width="@dimen/size_scanner"
+        android:layout_height="@dimen/size_scanner"
+        android:layout_below="@+id/tile_scanner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#ff020202" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="game scanner"
+        android:id="@+id/tile_scanner"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center|center_vertical"
+        android:background="#222b33"
+        android:textColor="#ffffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="ชื่อเกมส์ : "
-        android:layout_marginTop="35dp"
-        android:id="@+id/textView"
-        android:textSize="13sp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/scanner_fragment"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="5dp"
-        android:layout_marginLeft="24dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="title"
-        android:id="@+id/title_content"
-        android:textSize="13sp"
-        android:padding="5dp"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/footer"
+        android:background="#3a1d252c"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="คำอธิบาย : "
+        android:layout_marginTop="15dp">
 
-        android:id="@+id/textView2"
-        android:textSize="13sp"
-        android:padding="5dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="คำอธิบาย"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="description"
-        android:id="@+id/description_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:textSize="13sp"
-        android:padding="5dp" />
+            android:id="@+id/textView2"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="#ff020202"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="description"
+            android:id="@+id/description_content"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:textColor="#ff2f2f2f"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp" />
+    </RelativeLayout>
 
 </RelativeLayout>

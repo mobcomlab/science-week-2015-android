@@ -1,6 +1,7 @@
 package com.example.sanuphap.scienceweeks.uiQuestion;
 
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -8,7 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sanuphap.scienceweeks.R;
 import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
@@ -60,7 +65,26 @@ public class Questions extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setIcon(R.mipmap.icon_question);
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                actionBar.setIcon(R.mipmap.icon_question);
+                break;
+            case "qr":
+                actionBar.setIcon(R.mipmap.icon_scanner);
+                break;
+            case "beacon":
+                actionBar.setIcon(R.mipmap.icon_beacon);
+                break;
+            case "math":
+                actionBar.setIcon(R.mipmap.icon_math);
+                break;
+            case "maze":
+                actionBar.setIcon(R.mipmap.icon_maze);
+                break;
+            case "mobcom":
+                actionBar.setIcon(R.mipmap.icon_mcl);
+                break;
+        }
 
         setTitle(databaseManager.getQuest(questId).getTitle());
 
@@ -323,36 +347,98 @@ public class Questions extends AppCompatActivity {
     }
 
     public void toFinish(){
-        intent = new Intent(this,ScoreQuestion.class);
-        intent.putExtra("score",score);
-        intent.putExtra(QuestContents.QUEST_ID,questId);
-        intent.putExtra(QuestContents.FOR_END,forEnd-1);
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.custom_dialog);
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
 
-        startActivity(intent);
-
-        finish();
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_questions, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.qa_clear);
+                }else {
+                    image.setImageResource(R.drawable.qa);
+                }
+                break;
+            case "qr":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.qr_clear);
+                }else {
+                    image.setImageResource(R.drawable.qr);
+                }
+                break;
+            case "beacon":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.find_clear);
+                }else {
+                    image.setImageResource(R.drawable.find);
+                }
+                break;
+            case "math":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.math_clear);
+                }else {
+                    image.setImageResource(R.drawable.math);
+                }
+                break;
+            case "maze":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.maze_clear);
+                }else {
+                    image.setImageResource(R.drawable.maze);
+                }
+                break;
+            case "mobcom":
+                if (score >= (forEnd / 2)) {
+                    image.setImageResource(R.drawable.mcl_clear);
+                }else {
+                    image.setImageResource(R.drawable.mcl);
+                }
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+        TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
+            text_status.setText("YOUR SCORE : "+score+"/"+(forEnd-1));
+
+        Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (score >= (forEnd / 2)) {
+                    databaseManager.UpdateStatus(questId, 1);
+                    Toast.makeText(Questions.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Toast.makeText(Questions.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                    databaseManager.UpdateStatus(questId, 0);
+                }
+
+                finish();
+
+            }
+        });
+
+        Button btn_again =(Button) dialog.findViewById(R.id.btn_playagain);
+        btn_again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(Questions.this,Questions.class);
+                intent.putExtra(QuestContents.QUEST_ID,questId);
+                databaseManager.UpdateStatus(questId, 0);
+                startActivity(intent);
+
+                finish();
+            }
+        });
+
+
+        dialog.show();
+
     }
-}
+
+
+
+        }
+
+
+

@@ -71,30 +71,35 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
         }
 
         if (objQuest.getStatus()==0){
-            switch (objQuest.getIcon()) {
-                case "quest":
-                    holder.image.setImageResource(R.drawable.qa);
-                    break;
-                case "qr":
-                    holder.image.setImageResource(R.drawable.qr);
-                    break;
-                case "beacon":
-                    holder.image.setImageResource(R.drawable.find);
-                    break;
+
+            if(objQuest.getIcon().equals("math")){
+                holder.image.setImageResource(R.drawable.math);
+            }else if(objQuest.getIcon().equals("quest")){
+                holder.image.setImageResource(R.drawable.qa);
+            }else if(objQuest.getIcon().equals("qr")){
+                holder.image.setImageResource(R.drawable.qr);
+            }else if(objQuest.getIcon().equals("maze")){
+                holder.image.setImageResource(R.drawable.maze);
+            }else if(objQuest.getIcon().equals("mobcom")){
+                holder.image.setImageResource(R.drawable.mcl);
+            }else if(objQuest.getIcon().equals("beacon")){
+                holder.image.setImageResource(R.drawable.find);
             }
 
 
         }else  if (objQuest.getStatus()==1){
-            switch (objQuest.getIcon()) {
-                case "quest":
-                    holder.image.setImageResource(R.drawable.qa_clear);
-                    break;
-                case "qr":
-                    holder.image.setImageResource(R.drawable.qr_clear);
-                    break;
-                case "beacon":
-                    holder.image.setImageResource(R.drawable.find_clear);
-                    break;
+            if(objQuest.getIcon().equals("math")){
+                holder.image.setImageResource(R.drawable.math_clear);
+            }else if(objQuest.getIcon().equals("quest")){
+                holder.image.setImageResource(R.drawable.qa_clear);
+            }else if(objQuest.getIcon().equals("qr")){
+                holder.image.setImageResource(R.drawable.qr_clear);
+            }else if(objQuest.getIcon().equals("maze")){
+                holder.image.setImageResource(R.drawable.maze_clear);
+            }else if(objQuest.getIcon().equals("mobcom")){
+                holder.image.setImageResource(R.drawable.mcl_clear);
+            }else if(objQuest.getIcon().equals("beacon")){
+                holder.image.setImageResource(R.drawable.find_clear);
             }
 
 
@@ -135,3 +140,19 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
         return data.size();
     }
 }
+
+
+/*test test
+if(objQuest.getIcon().equals("math")){
+        holder.image.setImageResource(R.drawable.math);
+        }else if(objQuest.getIcon().equals("quest")){
+        holder.image.setImageResource(R.drawable.qa);
+        }else if(objQuest.getIcon().equals("qr")){
+        holder.image.setImageResource(R.drawable.qr);
+        }else if(objQuest.getIcon().equals("maze")){
+        holder.image.setImageResource(R.drawable.maze);
+        }else if(objQuest.getIcon().equals("mobcom")){
+        holder.image.setImageResource(R.drawable.math);
+        }else if(objQuest.getIcon().equals("beacon")){
+        holder.image.setImageResource(R.drawable.find);
+        }*/

@@ -1,14 +1,21 @@
 package com.example.sanuphap.scienceweeks.uiScanner;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.Vibrator;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.sanuphap.scienceweeks.R;
@@ -27,18 +34,42 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
     String codeId;
     String string_des;
 
+    DatabaseManager databaseManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner_code);
 
+        databaseManager = new DatabaseManager(this);
+        intent = getIntent();
+        questId = intent.getIntExtra(QuestContents.QUEST_ID,0);
+
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setIcon(R.mipmap.icon_scanner);
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                actionBar.setIcon(R.mipmap.icon_question);
+                break;
+            case "qr":
+                actionBar.setIcon(R.mipmap.icon_scanner);
+                break;
+            case "beacon":
+                actionBar.setIcon(R.mipmap.icon_beacon);
+                break;
+            case "math":
+                actionBar.setIcon(R.mipmap.icon_math);
+                break;
+            case "maze":
+                actionBar.setIcon(R.mipmap.icon_maze);
+                break;
+            case "mobcom":
+                actionBar.setIcon(R.mipmap.icon_mcl);
+                break;
+        }
 
-        final DatabaseManager databaseManager = new DatabaseManager(this);
+
 
         scannerFragment = new ScannerFragment();
         scannerFragment.setScannerViewEventListener(this);
@@ -46,9 +77,7 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
                 .replace(R.id.scanner_fragment, scannerFragment)
                 .commit();
 
-        intent = getIntent();
 
-        questId =intent.getIntExtra(QuestContents.QUEST_ID, 0);
 
         setTitle(databaseManager.getQuest(questId).getTitle());
 
@@ -70,7 +99,7 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
         }
 
         text_description.setText(string_des);
-        TextView text_title = (TextView) findViewById(R.id.title_content);
+        TextView text_title = (TextView) findViewById(R.id.tile_scanner);
         text_title.setText(titles);
 
 
@@ -78,27 +107,7 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scanner_code, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onScannerReady() {
@@ -113,16 +122,14 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
     @Override
     public boolean onCodeScanned(String data) {
 
-        ScannerView scanner = scannerFragment.getScanner();
+        final ScannerView scanner = scannerFragment.getScanner();
         scanner.stopScanner();
         Vibrator v = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(500);
 
         if(data.equals(codeId)){
-            intent = new Intent(this,CorrectScannerCode.class);
-            intent.putExtra(QuestContents.QUEST_ID,questId);
-            startActivity(intent);
-            finish();
+
+            toCorrect();
         }else {
             scanner.startScanner();
         }
@@ -130,5 +137,64 @@ public class ScannerCode extends AppCompatActivity implements ScannerView.Scanne
 
 
         return false;
+    }
+    public void toCorrect(){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.custom_dialog);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        switch (databaseManager.getQuest(questId).getIcon()) {
+            case "quest":
+                image.setImageResource(R.drawable.qa_clear);
+                break;
+            case "qr":
+                image.setImageResource(R.drawable.qr_clear);
+                break;
+            case "beacon":
+                image.setImageResource(R.drawable.find_clear);
+                break;
+            case "math":
+                image.setImageResource(R.drawable.math_clear);
+                break;
+            case "maze":
+                image.setImageResource(R.drawable.maze_clear);
+                break;
+            case "mobcom":
+                image.setImageResource(R.drawable.mcl_clear);
+                break;
+        }
+
+        TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
+        text_status.setText("YOUR STATUS : CORRECT");
+
+        Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                databaseManager.UpdateStatus(questId, 1);
+                Toast.makeText(ScannerCode.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+
+
+                finish();
+
+            }
+        });
+
+        Button btn_again =(Button) dialog.findViewById(R.id.btn_playagain);
+        btn_again.setText("ยกเลิก");
+        btn_again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ScannerView scanner = scannerFragment.getScanner();
+
+                dialog.dismiss();
+                Toast.makeText(ScannerCode.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                scanner.startScanner();
+
+            }
+        });
+        dialog.show();
     }
 }
