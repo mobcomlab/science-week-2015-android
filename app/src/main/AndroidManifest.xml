@@ -52,15 +52,6 @@
                 android:value="com.example.sanuphap.scienceweeks.MainActivity" />
         </activity>
         <activity
-            android:name=".uiScanner.CorrectScannerCode"
-            android:label="@string/title_activity_corect_scanner_code"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="locked" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sanuphap.scienceweeks.MainActivity" />
-        </activity>
-        <activity
             android:name=".uiQuestion.Questions"
             android:label="@string/title_activity_questions"
             android:parentActivityName=".MainActivity"
@@ -70,26 +61,8 @@
                 android:value="com.example.sanuphap.scienceweeks.MainActivity" />
         </activity>
         <activity
-            android:name=".uiQuestion.ScoreQuestion"
-            android:label="@string/title_activity_score_question"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="locked" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sanuphap.scienceweeks.MainActivity" />
-        </activity>
-        <activity
             android:name=".uiBeacon.Beacons"
             android:label="@string/title_activity_beacons"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="locked" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sanuphap.scienceweeks.MainActivity" />
-        </activity>
-        <activity
-            android:name=".uiBeacon.FoundBeacon"
-            android:label="@string/title_activity_found_beacon"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="locked" >
             <meta-data
