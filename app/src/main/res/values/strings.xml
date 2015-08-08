@@ -19,4 +19,11 @@
     <string name="title_activity_beacons">Beacons</string>
     <string name="title_activity_found_beacon">FoundBeacon</string>
     <string name="title_activity_set_actionbar">setActionbar</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="title_activity_aboutme">AboutmeActivity</string>
+
+    <!-- bar title activity-->
+    <color name="color_bar">#37474F</color>
+    <color name="color_font">#fff</color>
+
 </resources>

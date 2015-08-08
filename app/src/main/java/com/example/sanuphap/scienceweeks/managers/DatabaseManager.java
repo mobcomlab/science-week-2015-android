@@ -2,7 +2,7 @@ package com.example.sanuphap.scienceweeks.managers;
 
 import android.content.Context;
 
-import com.example.sanuphap.scienceweeks.models.GameOptionModel;
+
 import com.example.sanuphap.scienceweeks.models.QuestModel;
 
 import java.util.List;

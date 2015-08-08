@@ -7,13 +7,15 @@
         <!-- Main theme colors -->
         <!--   your app branding color for the app bar -->
         <item name="android:windowActionBar">true</item>
+
         <item name="android:windowNoTitle">true</item>
         <!--<item name="android:windowAnimationStyle">@style/MyAnimation2.Window</item>-->
-        <item name="colorPrimary">#1d252c</item>
+        <item name="colorPrimary">#F44336</item>
         <!--   darker variant for the status bar and contextual app bars -->
-        <item name="colorPrimaryDark">#1d252c</item>
+        <item name="colorPrimaryDark">#B71C1C</item>
         <!--   theme UI controls like checkboxes and text fields -->
-        <item name="colorAccent">#9E9E9E</item>
+        <item name="colorAccent">#E91E63</item>
+        <item name="colorControlHighlight">#4a5056</item>
 
 
     </style>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sanuphap.scienceweeks.appInfo.InfoActivity">
+
+    <item
+        android:id="@+id/action_info"
+        android:title="Info"
+        android:icon="@drawable/ic_info"
+        android:orderInCategory="100" app:showAsAction="always">
+
+    </item>
+</menu>

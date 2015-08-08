@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sanuphap.scienceweeks" >
 
-
     <!-- user for QR -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -43,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".uiScanner.ScannerCode"
+            android:name=".uiScanner.ScannerActivity"
             android:label="@string/title_activity_scanner_code"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="locked" >
@@ -52,7 +51,7 @@
                 android:value="com.example.sanuphap.scienceweeks.MainActivity" />
         </activity>
         <activity
-            android:name=".uiQuestion.Questions"
+            android:name=".uiQuestion.QuestionActivity"
             android:label="@string/title_activity_questions"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="locked" >
@@ -61,8 +60,26 @@
                 android:value="com.example.sanuphap.scienceweeks.MainActivity" />
         </activity>
         <activity
-            android:name=".uiBeacon.Beacons"
+            android:name=".uiBeacon.BeaconActivity"
             android:label="@string/title_activity_beacons"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanuphap.scienceweeks.MainActivity" />
+        </activity>
+        <activity
+            android:name=".appInfo.InfoActivity"
+            android:label="@string/title_activity_info"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanuphap.scienceweeks.MainActivity" />
+        </activity>
+        <activity
+            android:name=".uiAbout.AboutmeActivity"
+            android:label="@string/title_activity_aboutme"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="locked" >
             <meta-data

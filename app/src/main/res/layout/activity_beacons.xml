@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.Beacons"
+    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.BeaconActivity"
     android:gravity="center_horizontal">
 
     <TextView
@@ -13,8 +13,8 @@
         android:text="Beacon"
         android:id="@+id/title"
         android:gravity="center|center_vertical"
-        android:background="#222b33"
-        android:textColor="#ffffffff"  />
+        android:background="@color/color_bar"
+        android:textColor="@color/color_font"  />
 
     <ImageView
         android:layout_width="@dimen/wifi_image_width"
@@ -41,15 +41,15 @@
         android:gravity="center_horizontal">
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/size_img_distance"
+            android:layout_height="@dimen/size_img_distance"
             android:id="@+id/circle_a"
             android:src="@drawable/circle_red"
             android:layout_gravity="center_horizontal" />
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/size_img_distance"
+            android:layout_height="@dimen/size_img_distance"
             android:id="@+id/circle_b"
             android:src="@drawable/circle_red"
             android:layout_gravity="center_horizontal"
@@ -57,8 +57,8 @@
             android:layout_marginRight="15dp" />
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/size_img_distance"
+            android:layout_height="@dimen/size_img_distance"
             android:id="@+id/circle_c"
             android:src="@drawable/circle_red" />
     </LinearLayout>

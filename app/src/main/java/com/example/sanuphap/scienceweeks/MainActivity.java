@@ -13,11 +13,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.sanuphap.scienceweeks.adapter.QuestAdapter;
+import com.example.sanuphap.scienceweeks.appInfo.InfoActivity;
 import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
 import com.example.sanuphap.scienceweeks.managers.WebServiceCallbackListener;
 import com.example.sanuphap.scienceweeks.managers.WebServiceManager;
 import com.example.sanuphap.scienceweeks.models.QuestContents;
 import com.example.sanuphap.scienceweeks.models.QuestModel;
+import com.example.sanuphap.scienceweeks.uiAbout.AboutmeActivity;
 
 import java.util.List;
 
@@ -27,15 +29,16 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
     private RecyclerView recyclerView;
 
     Context context ;
-//    Hello eiei test sisissi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setIcon(R.mipmap.ic_launcher);
+//        actionBar.setIcon(R.mipmap.ic_launcher);
+        setTitle("Science Week 2015");
 
         // Get data
         List<QuestModel> data = new DatabaseManager(this).getQuests();
@@ -54,7 +57,10 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_regame, menu);
+
+        getMenuInflater().inflate(R.menu.menu_info, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -69,7 +75,17 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.action_start_new_game) {
+        if (id == R.id.action_info) {
+            Intent myIntent = new Intent(this, InfoActivity.class);
+            startActivity(myIntent);
+            return true;
+        }
+        if (id == R.id.action_about) {
+            Intent myIntent = new Intent(this, AboutmeActivity.class);
+            startActivity(myIntent);
+            return true;
+        }
+        if (id == R.id.action_reset) {
 
 
             new AlertDialog.Builder(this)
@@ -100,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
                     .setNegativeButton("ยกเลิก", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // do nothing
+
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)

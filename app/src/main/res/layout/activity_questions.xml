@@ -4,7 +4,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
-    tools:context="com.example.sanuphap.scienceweeks.uiQuestion.Questions">
+    tools:context="com.example.sanuphap.scienceweeks.uiQuestion.QuestionActivity">
 
     <TextView
         android:layout_width="330dp"
@@ -98,8 +98,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center|center_vertical"
-        android:background="#222b33"
-        android:textColor="#ffffffff" />
+        android:background="@color/color_bar"
+        android:textColor="@color/color_font" />
 
     <TextView
         android:layout_width="match_parent"

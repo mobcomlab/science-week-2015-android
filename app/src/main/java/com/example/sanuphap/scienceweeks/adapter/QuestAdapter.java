@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,12 +14,12 @@ import android.widget.TextView;
 
 import com.example.sanuphap.scienceweeks.MainActivity;
 import com.example.sanuphap.scienceweeks.R;
-import com.example.sanuphap.scienceweeks.models.GameOptionModel;
+
 import com.example.sanuphap.scienceweeks.models.QuestContents;
 import com.example.sanuphap.scienceweeks.models.QuestModel;
-import com.example.sanuphap.scienceweeks.uiBeacon.Beacons;
-import com.example.sanuphap.scienceweeks.uiQuestion.Questions;
-import com.example.sanuphap.scienceweeks.uiScanner.ScannerCode;
+import com.example.sanuphap.scienceweeks.uiBeacon.BeaconActivity;
+import com.example.sanuphap.scienceweeks.uiQuestion.QuestionActivity;
+import com.example.sanuphap.scienceweeks.uiScanner.ScannerActivity;
 
 import java.util.List;
 
@@ -85,20 +84,20 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
             public void onClick(View v) {
 
                 if (objQuest.getType() == 1) {
-                    Intent intent = new Intent(context, Questions.class);
+                    Intent intent = new Intent(context, QuestionActivity.class);
                     intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
                     ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
 
 
                 } else if (objQuest.getType() == 2) {
 
-                    Intent intent = new Intent(context, ScannerCode.class);
+                    Intent intent = new Intent(context, ScannerActivity.class);
                     intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
                     ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
 
                 } else if (objQuest.getType() == 3) {
 
-                    Intent intent = new Intent(context, Beacons.class);
+                    Intent intent = new Intent(context, BeaconActivity.class);
                     intent.putExtra(QuestContents.QUEST_ID, objQuest.getId());
                     ((Activity) context).startActivityForResult(intent, MainActivity.rg_update);
 
