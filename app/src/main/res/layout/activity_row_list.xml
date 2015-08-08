@@ -15,12 +15,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/scanner_circle"
-
+        android:src="@drawable/bg_circle"
         android:paddingLeft="0dp"
-
         android:padding="0dp"
-        android:background="@drawable/beacon_circle" />
+        android:background="@drawable/bg_circle" />
 
     <TextView
         android:layout_width="64dp"

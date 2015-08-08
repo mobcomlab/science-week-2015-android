@@ -3,6 +3,9 @@ package com.example.sanuphap.scienceweeks.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,54 +60,25 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
 
         holder.sampleNameQuest.setText(objQuest.getTitle());
 
-        /*COLOR CIRCLE HERE*/
-        switch (objQuest.getColor()) {
-            case "yellow":
-                holder.image.setBackgroundResource(R.drawable.question_circle);
-                break;
-            case "green":
-                holder.image.setBackgroundResource(R.drawable.scanner_circle);
-                break;
-            case "blue":
-                holder.image.setBackgroundResource(R.drawable.beacon_circle);
-                break;
+        // Change background colour
+        GradientDrawable drawable = (GradientDrawable)holder.image.getBackground();
+        drawable.setColor(Color.parseColor(objQuest.getColor()));
+
+        // Set completed graphic
+        boolean completed = objQuest.getStatus() > 0;
+        if (objQuest.getIcon().equals("math")) {
+            holder.image.setImageResource(completed ? R.drawable.math_clear : R.drawable.math);
+        } else if (objQuest.getIcon().equals("quest")) {
+            holder.image.setImageResource(completed ? R.drawable.qa_clear : R.drawable.qa);
+        } else if (objQuest.getIcon().equals("qr")) {
+            holder.image.setImageResource(completed ? R.drawable.qr_clear : R.drawable.qr);
+        } else if (objQuest.getIcon().equals("maze")) {
+            holder.image.setImageResource(completed ? R.drawable.maze_clear : R.drawable.maze);
+        } else if (objQuest.getIcon().equals("mobcom")) {
+            holder.image.setImageResource(completed ? R.drawable.mcl_clear : R.drawable.mcl);
+        } else if (objQuest.getIcon().equals("beacon")) {
+            holder.image.setImageResource(completed ? R.drawable.find_clear : R.drawable.find);
         }
-
-        if (objQuest.getStatus()==0){
-
-            if(objQuest.getIcon().equals("math")){
-                holder.image.setImageResource(R.drawable.math);
-            }else if(objQuest.getIcon().equals("quest")){
-                holder.image.setImageResource(R.drawable.qa);
-            }else if(objQuest.getIcon().equals("qr")){
-                holder.image.setImageResource(R.drawable.qr);
-            }else if(objQuest.getIcon().equals("maze")){
-                holder.image.setImageResource(R.drawable.maze);
-            }else if(objQuest.getIcon().equals("mobcom")){
-                holder.image.setImageResource(R.drawable.mcl);
-            }else if(objQuest.getIcon().equals("beacon")){
-                holder.image.setImageResource(R.drawable.find);
-            }
-
-
-        }else  if (objQuest.getStatus()==1){
-            if(objQuest.getIcon().equals("math")){
-                holder.image.setImageResource(R.drawable.math_clear);
-            }else if(objQuest.getIcon().equals("quest")){
-                holder.image.setImageResource(R.drawable.qa_clear);
-            }else if(objQuest.getIcon().equals("qr")){
-                holder.image.setImageResource(R.drawable.qr_clear);
-            }else if(objQuest.getIcon().equals("maze")){
-                holder.image.setImageResource(R.drawable.maze_clear);
-            }else if(objQuest.getIcon().equals("mobcom")){
-                holder.image.setImageResource(R.drawable.mcl_clear);
-            }else if(objQuest.getIcon().equals("beacon")){
-                holder.image.setImageResource(R.drawable.find_clear);
-            }
-
-
-        }
-
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
