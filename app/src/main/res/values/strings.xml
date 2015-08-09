@@ -22,6 +22,8 @@
     <string name="title_activity_info">InfoActivity</string>
     <string name="title_activity_aboutme">AboutmeActivity</string>
 
+
+
     <!-- bar title activity-->
     <color name="color_bar">#37474F</color>
     <color name="color_font">#fff</color>

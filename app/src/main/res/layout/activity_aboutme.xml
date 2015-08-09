@@ -1,9 +1,54 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
     tools:context="com.example.sanuphap.scienceweeks.uiAbout.AboutmeActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:id="@+id/img_logo_mcl"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/mcl_logo" />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="220dp"
+        android:id="@+id/data"
+        android:src="@drawable/data_about"
+        android:layout_below="@+id/img_logo_mcl"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:id="@+id/img_logo_csit_nu"
+        android:src="@drawable/logo_csit_nu"
+        android:layout_below="@+id/data"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

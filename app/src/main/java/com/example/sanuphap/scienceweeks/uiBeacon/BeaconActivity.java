@@ -206,6 +206,7 @@ public class BeaconActivity extends AppCompatActivity {
                                 }
                                 if (getBeacon.getAccuracy() < 0.3) {
                                     toCorrect();
+                                    onPause();
                                 }
                             } else {
                                 circle_a.setImageResource(R.drawable.circle_red);
@@ -356,8 +357,15 @@ public class BeaconActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.dismiss();
+//                connect();
+
+                Intent intent = new Intent(BeaconActivity.this,BeaconActivity.class);
+                intent.putExtra(QuestContents.QUEST_ID,questId);
                 Toast.makeText(BeaconActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                dialog.dismiss();
+                startActivity(intent);
+                finish();
+
 
 
             }

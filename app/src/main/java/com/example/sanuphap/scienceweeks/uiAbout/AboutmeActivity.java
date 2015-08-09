@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.sanuphap.scienceweeks.R;
 
@@ -15,6 +16,8 @@ public class AboutmeActivity extends ActionBarActivity {
         setContentView(R.layout.activity_aboutme);
 
         setTitle("เกี่ยวกับเรา");
+
+
     }
 
 
