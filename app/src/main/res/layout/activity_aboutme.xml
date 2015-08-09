@@ -4,6 +4,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
+
     tools:context="com.example.sanuphap.scienceweeks.uiAbout.AboutmeActivity">
 
     <ScrollView
@@ -20,15 +21,17 @@
     <TextView
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
+        android:textColor="#000"
         android:layout_height="wrap_content"
         android:id="@+id/name_about_app"
-        android:text="แอพพลิเคชั่นนนี้พัฒนามาเพื่องานสัปดาห์วิทยาศาสตร์ คณะวิทยาศาสตร์ มหาวิทยาลัยนเรศวร, พิษณุโลก"
+        android:text="แอพพลิเคชั่นนี้พัฒนามาเพื่องานสัปดาห์วิทยาศาสตร์ คณะวิทยาศาสตร์ มหาวิทยาลัยนเรศวร, พิษณุโลก"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:gravity="center|center_vertical" />
     <TextView
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
+        android:textColor="#000"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_about_app"
         android:id="@+id/name_dep"
@@ -40,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/name_dep"
         android:id="@+id/name_dep_ios"
+        android:textColor="#000"
         android:text="iOS: นายณัฐวุฒิ วณิชชาศิริ"
         android:paddingTop="3dp"
 
@@ -47,6 +51,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_below="@id/name_dep_ios"
         android:id="@+id/name_dep_android"
         android:text="Android: นายอนุภาพ สุวรรณมาศ, นายณัฐวุฒิ เหมะธุลิน"
@@ -55,6 +60,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_below="@id/name_dep_android"
         android:id="@+id/name_dep_graphic"
         android:text="Graphic: นางสาวเจนจิรา นาคหรั่ง, นางสาวสุชาดา สิงหฬ"
@@ -64,6 +70,7 @@
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_below="@id/name_dep_graphic"
         android:id="@+id/contect_me"
         android:text="ติดต่อเรา"
@@ -72,6 +79,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_below="@id/contect_me"
         android:id="@+id/name_contect"
         android:text="Mobile Computing Lab, Email: info@mobcomlab.com "
@@ -89,6 +97,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_marginTop="10dp"
         android:layout_below="@id/img_logo_mcl"
         android:id="@+id/content_mob"
