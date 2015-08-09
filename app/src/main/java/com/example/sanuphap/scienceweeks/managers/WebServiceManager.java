@@ -9,6 +9,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.sanuphap.scienceweeks.Constant;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
  * Created by sAnuphap on 24/7/2558.
  */
 public class WebServiceManager {
-    private final static String QUEST_URL = "http://192.168.215.1:8888/api/quests";
+    private final static String QUEST_URL = Constant.WebServiceBaseURL + "api/quests";
 //ip: http://192.168.215.1:8888/api/quests
 //ip emu: http://192.168.2.178:8888/api/quests
     final Context context;

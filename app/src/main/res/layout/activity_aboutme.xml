@@ -17,30 +17,91 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_about_app"
+        android:text="แอพพลิเคชั่นนนี้พัฒนามาเพื่องานสัปดาห์วิทยาศาสตร์ คณะวิทยาศาสตร์ มหาวิทยาลัยนเรศวร, พิษณุโลก"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:gravity="center|center_vertical" />
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_about_app"
+        android:id="@+id/name_dep"
+        android:text="ผู้พัฒนาแอพลิเคชั่น"
+        android:paddingTop="5dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_dep"
+        android:id="@+id/name_dep_ios"
+        android:text="iOS: นายณัฐวุฒิ วณิชชาศิริ"
+        android:paddingTop="3dp"
 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_dep_ios"
+        android:id="@+id/name_dep_android"
+        android:text="Android: นายอนุภาพ สุวรรณมาศ, นายณัฐวุฒิ เหมะธุลิน"
+        android:paddingTop="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_dep_android"
+        android:id="@+id/name_dep_graphic"
+        android:text="Graphic: นางสาวเจนจิรา นาคหรั่ง, นางสาวสุชาดา สิงหฬ"
+        android:paddingTop="3dp" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_dep_graphic"
+        android:id="@+id/contect_me"
+        android:text="ติดต่อเรา"
+        android:paddingTop="5dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contect_me"
+        android:id="@+id/name_contect"
+        android:text="Mobile Computing Lab, Email: info@mobcomlab.com "
+        android:paddingTop="3dp"/>
     <ImageView
         android:layout_width="240dp"
+        android:padding="5dp"
         android:layout_height="120dp"
         android:id="@+id/img_logo_mcl"
-
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/name_contect"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:src="@drawable/mcl_logo" />
 
-    <ImageView
-        android:layout_width="280dp"
-        android:layout_height="220dp"
-        android:id="@+id/data"
-        android:src="@drawable/data_about"
-        android:layout_below="@+id/img_logo_mcl"
-        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/img_logo_mcl"
+        android:id="@+id/content_mob"
+        android:text="\t \t Mobile Computing Lab เป็นห้องปฏิบัติการวิจัยภายใต้การดูแลของคณะวิทยาศาสตร์ มหาวิทยาลัยนเรศวรจังหวัดพิษณุโลก นำโดย Dr.Antony Harfield ผู้เชี่ยวชาญพิเศษด้านวิทยาการคอมพิวเตอร์และเทคโนโลยี ซึ่งมากด้วยประสบการณ์การทำงานและ การทำวิจัยด้านเทคโนโลยีมากว่า 10ปี ที่ได้พัฒนาและ ให้คำปรึกษาด้านซอฟต์แวร์และเทคโนโลยีต่างๆบนอุปกรณ์เคลื่อนที่ รวมถึงการพัฒนาแอพพลิเคชั่นบนสมาร์ทโฟนและแท็บเล็ตซึ่งงานวิจัยที่ดำเนินครอบคลุมหลายสาขา ยกตัวอย่างเช่น ด้านการศึกษา การท่องเที่ยว ชุมชนท้องถิ่น เป็นต้น"
+        android:paddingTop="3dp" />
+
     <ImageView
         android:layout_width="240dp"
         android:layout_height="160dp"
+        android:layout_marginTop="25dp"
         android:id="@+id/img_logo_csit_nu"
         android:src="@drawable/logo_csit_nu"
-        android:layout_below="@+id/data"
+        android:layout_below="@+id/content_mob"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />

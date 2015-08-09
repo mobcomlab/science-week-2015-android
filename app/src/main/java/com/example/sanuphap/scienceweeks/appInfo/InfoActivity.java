@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
+import com.example.sanuphap.scienceweeks.Constant;
 import com.example.sanuphap.scienceweeks.R;
 
 public class InfoActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class InfoActivity extends AppCompatActivity {
 
         setTitle("ข้อมูลแนะนำ");
 
-        String url ="http://student.nu.ac.th/anuphap/webTac/food.html";
+        String url = Constant.WebServiceBaseURL + "info";
         
 
         WebView view =(WebView) this.findViewById(R.id.webInfo);

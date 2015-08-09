@@ -1,0 +1,28 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/click_gray"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:id="@+id/head_wel"
+        android:text="'' ยินดีต้อนรับสู่งานสัปดาห์วิทยาศาสตร์ ''"
+        android:paddingTop="10dp"
+        android:textStyle="bold"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:text="ถ้าคุณเล่นผ่านทุกเควสสามารถแลกรับของรางวัลได้ที่บูธ ชั้น1"
+        android:paddingTop="3dp"
+        android:textSize="13sp"
+        android:layout_marginTop="25dp"/>
+
+</FrameLayout>
+

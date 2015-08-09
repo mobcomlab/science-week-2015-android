@@ -5,12 +5,16 @@
     android:paddingTop="0dp"
     android:paddingBottom="0dp" tools:context=".MainActivity">
 
+
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_game"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp" />
+        android:paddingRight="16dp"
+        />
 
 </RelativeLayout>

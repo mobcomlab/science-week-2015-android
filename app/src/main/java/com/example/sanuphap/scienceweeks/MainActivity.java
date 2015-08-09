@@ -12,6 +12,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
+import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 import com.example.sanuphap.scienceweeks.adapter.QuestAdapter;
 import com.example.sanuphap.scienceweeks.appInfo.InfoActivity;
 import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
@@ -50,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
         recyclerView.setHasFixedSize(true);
         GridLayoutManager glm=new GridLayoutManager(this,3);
         recyclerView.setLayoutManager(glm);
-
+        RecyclerViewHeader header = RecyclerViewHeader.fromXml(this, R.layout.header_info);
+        header.attachTo(recyclerView);
         new WebServiceManager(this,this).requestSoilSamples();
     }
 
@@ -58,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
 
-        getMenuInflater().inflate(R.menu.menu_info, menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         return true;
