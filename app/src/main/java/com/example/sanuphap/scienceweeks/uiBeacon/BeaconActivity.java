@@ -47,12 +47,15 @@ public class BeaconActivity extends AppCompatActivity {
     Region reg;
     int num_run=1;
 
+    String[] array_answer;
+
     String[] array_description;
 
     private BeaconManager beaconManager;
     private List<BeaconDevice> beaconDevices;
     Intent myIntent;
     TextView status,title,description;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,14 +90,11 @@ public class BeaconActivity extends AppCompatActivity {
         }
 */
 
+
+
         beaconDevices = new ArrayList<BeaconDevice>();
-
-
-
-
-
-
         setTitle(databaseManager.getQuest(questId).getTitle());
+        array_answer=databaseManager.getQuest(questId).getAnswer().split(",");
 
         status =(TextView) findViewById(R.id.status);
         title =(TextView)  findViewById(R.id.title);
@@ -161,7 +161,7 @@ public class BeaconActivity extends AppCompatActivity {
             @Override
             public Boolean apply(AdvertisingPackage advertisingPackage) {
 
-                if(advertisingPackage.getBeaconUniqueId().equals(databaseManager.getQuest(questId).getAnswer())){
+                if(advertisingPackage.getBeaconUniqueId().equals(array_answer[3])){
 //
                     return true;
                 }
@@ -186,7 +186,8 @@ public class BeaconActivity extends AppCompatActivity {
                         status.setText(String.format("Distance: %s m", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
 
 
-                        if (getBeacon.getUniqueId().equals(databaseManager.getQuest(questId).getAnswer())) {
+
+                        if (getBeacon.getUniqueId().equals(array_answer[3])) {
                             status.setText(String.format("Distance: %s m", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
                             if (getBeacon.getAccuracy() < 3.0) {
                                 circle_a.setImageResource(R.drawable.circle_green);
@@ -197,14 +198,14 @@ public class BeaconActivity extends AppCompatActivity {
                                 } else {
                                     circle_b.setImageResource(R.drawable.circle_red);
                                 }
-                                if (getBeacon.getAccuracy() < 0.3) {
+                                if (getBeacon.getAccuracy() < Double.parseDouble(array_answer[4])) {
                                     circle_a.setImageResource(R.drawable.circle_green);
                                     circle_b.setImageResource(R.drawable.circle_green);
                                     circle_c.setImageResource(R.drawable.circle_green);
                                 } else {
                                     circle_c.setImageResource(R.drawable.circle_red);
                                 }
-                                if (getBeacon.getAccuracy() < 0.3) {
+                                if (getBeacon.getAccuracy() < Double.parseDouble(array_answer[4])) {
                                     toCorrect();
                                     onPause();
                                 }

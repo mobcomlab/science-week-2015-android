@@ -38,13 +38,16 @@ public class QuestionActivity extends AppCompatActivity {
 
 
 
+
     int score;
     int number_order = 1;
 
     int forEnd=0;
 
     Random random;
-    int num_random=0;
+    int random_choice =0;
+
+
     int order=0;
 
     DatabaseManager databaseManager;
@@ -106,7 +109,8 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesD = (TextView) findViewById(R.id.choiceD);
         number =(TextView) findViewById(R.id.nuber_order);
 
-        num_random = random.nextInt(4);
+        random_choice= random.nextInt(4);
+
 
 
 
@@ -115,25 +119,25 @@ public class QuestionActivity extends AppCompatActivity {
         String Choice = allChoices[order];
         choices = Choice.split(",");
 
-        if (num_random==0){
+        if (random_choice ==0){
             display_choicesA.setText(answers[order]);
             display_choicesB.setText(choices[0]);
             display_choicesC.setText(choices[1]);
             display_choicesD.setText(choices[2]);
 
-        }else  if (num_random==1){
+        }else  if (random_choice ==1){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(answers[order]);
             display_choicesC.setText(choices[1]);
             display_choicesD.setText(choices[2]);
 
-        }else if (num_random==2){
+        }else if (random_choice ==2){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(choices[1]);
             display_choicesC.setText(answers[order]);
             display_choicesD.setText(choices[2]);
 
-        }else if (num_random==3){
+        }else if (random_choice ==3){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(choices[1]);
             display_choicesC.setText(choices[2]);
@@ -144,7 +148,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==0){
+                if (random_choice ==0){
                     order++;
                     score++;
                     number_order++;
@@ -164,7 +168,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==1){
+                if (random_choice ==1){
                     order++;
                     score++;
                     number_order++;
@@ -184,7 +188,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==2){
+                if (random_choice ==2){
                     order++;
                     score++;
                     number_order++;
@@ -204,7 +208,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==3){
+                if (random_choice ==3){
                     order++;
                     score++;
                     number_order++;
@@ -229,32 +233,33 @@ public class QuestionActivity extends AppCompatActivity {
 
     }
 
+
     public void readQuestions(){
-        num_random = random.nextInt(4);
+        random_choice = random.nextInt(4);
         number.setText(number_order+" / "+questions.length);
         display_questions.setText(questions[order]);
         String Choice = allChoices[order];
         choices = Choice.split(",");
 
-        if (num_random==0){
+        if (random_choice ==0){
             display_choicesA.setText(answers[order]);
             display_choicesB.setText(choices[0]);
             display_choicesC.setText(choices[1]);
             display_choicesD.setText(choices[2]);
 
-        }else  if (num_random==1){
+        }else  if (random_choice ==1){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(answers[order]);
             display_choicesC.setText(choices[1]);
             display_choicesD.setText(choices[2]);
 
-        }else if (num_random==2){
+        }else if (random_choice ==2){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(choices[1]);
             display_choicesC.setText(answers[order]);
             display_choicesD.setText(choices[2]);
 
-        }else if (num_random==3){
+        }else if (random_choice ==3){
             display_choicesA.setText(choices[0]);
             display_choicesB.setText(choices[1]);
             display_choicesC.setText(choices[2]);
@@ -265,7 +270,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==0){
+                if (random_choice ==0){
                     order++;
                     score++;
                     number_order++;
@@ -285,7 +290,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==1){
+                if (random_choice ==1){
                     order++;
                     score++;
                     number_order++;
@@ -305,7 +310,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==2){
+                if (random_choice ==2){
                     order++;
                     score++;
                     number_order++;
@@ -325,7 +330,7 @@ public class QuestionActivity extends AppCompatActivity {
         display_choicesD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num_random==3){
+                if (random_choice ==3){
                     order++;
                     score++;
                     number_order++;

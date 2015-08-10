@@ -24,7 +24,7 @@ public class InfoActivity extends AppCompatActivity {
 
         WebView view =(WebView) this.findViewById(R.id.webInfo);
 //        view.getSettings().setJavaScriptEnabled(true);
-        view.getSettings().setBuiltInZoomControls(true);
+//        view.getSettings().setBuiltInZoomControls(true);
         view.loadUrl(url);
     }
 
