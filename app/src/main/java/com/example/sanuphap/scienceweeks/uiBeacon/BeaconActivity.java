@@ -87,8 +87,7 @@ public class BeaconActivity extends AppCompatActivity {
             case "mobcom":
                 actionBar.setIcon(R.mipmap.icon_mcl);
                 break;
-        }
-*/
+        }*/
 
 
 
@@ -213,6 +212,8 @@ public class BeaconActivity extends AppCompatActivity {
                                 circle_a.setImageResource(R.drawable.circle_red);
                                 circle_b.setImageResource(R.drawable.circle_red);
                                 circle_c.setImageResource(R.drawable.circle_red);
+
+                                status.setText("Searching...");
                             }
 
 
@@ -338,7 +339,7 @@ public class BeaconActivity extends AppCompatActivity {
         }
 
         TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
-        text_status.setText("YOUR STATUS : CORRECT");
+        text_status.setText("คุณได้ผ่านเควสนี้แล้ว");
 
         Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
         btn_save.setOnClickListener(new View.OnClickListener() {

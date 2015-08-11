@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-//        actionBar.setIcon(R.mipmap.ic_launcher);
+        actionBar.setIcon(R.mipmap.ic_launcher);
         setTitle("Science Week 2015");
 
         // Get data
@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
         final List<QuestModel> data = new DatabaseManager(this).getQuests();
         final RecyclerView samples = (RecyclerView) findViewById(R.id.list_game);
         samples.setAdapter(new QuestAdapter(this, data));
+
     }
 
 
@@ -145,6 +146,9 @@ public class MainActivity extends AppCompatActivity implements WebServiceCallbac
 
         if (requestCode == rg_update) {
             refreshData();
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 

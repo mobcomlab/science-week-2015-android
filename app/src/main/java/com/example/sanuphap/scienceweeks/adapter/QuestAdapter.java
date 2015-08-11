@@ -70,11 +70,11 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
         } else if (objQuest.getIcon().equals("quest")) {
             holder.image.setImageResource(completed ? R.drawable.qa_clear : R.drawable.qa);
         } else if (objQuest.getIcon().equals("qr")) {
-            holder.image.setImageResource(completed ? R.drawable.qr_clear : R.drawable.qr);
+            holder.image.setImageResource(completed ? R.drawable.qr_clear: R.drawable.qr);
         } else if (objQuest.getIcon().equals("maze")) {
-            holder.image.setImageResource(completed ? R.drawable.maze_clear : R.drawable.maze);
+            holder.image.setImageResource(completed ? R.drawable.maze_clear: R.drawable.maze);
         } else if (objQuest.getIcon().equals("mobcom")) {
-            holder.image.setImageResource(completed ? R.drawable.mcl_clear : R.drawable.mcl);
+            holder.image.setImageResource(completed ? R.drawable.mcl_clear: R.drawable.mcl);
         } else if (objQuest.getIcon().equals("beacon")) {
             holder.image.setImageResource(completed ? R.drawable.find_clear : R.drawable.find);
         }
@@ -115,17 +115,4 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder>{
 }
 
 
-/*test test
-if(objQuest.getIcon().equals("math")){
-        holder.image.setImageResource(R.drawable.math);
-        }else if(objQuest.getIcon().equals("quest")){
-        holder.image.setImageResource(R.drawable.qa);
-        }else if(objQuest.getIcon().equals("qr")){
-        holder.image.setImageResource(R.drawable.qr);
-        }else if(objQuest.getIcon().equals("maze")){
-        holder.image.setImageResource(R.drawable.maze);
-        }else if(objQuest.getIcon().equals("mobcom")){
-        holder.image.setImageResource(R.drawable.math);
-        }else if(objQuest.getIcon().equals("beacon")){
-        holder.image.setImageResource(R.drawable.find);
-        }*/
+

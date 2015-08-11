@@ -85,8 +85,8 @@ public class QuestionActivity extends AppCompatActivity {
             case "mobcom":
                 actionBar.setIcon(R.mipmap.icon_mcl);
                 break;
-        }
-*/
+        }*/
+
         setTitle(databaseManager.getQuest(questId).getTitle());
 
 
@@ -401,7 +401,7 @@ public class QuestionActivity extends AppCompatActivity {
         }
 
         TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
-            text_status.setText("YOUR SCORE : "+score+"/"+(forEnd-1));
+            text_status.setText("คะแนนของคุณคือ : "+score+"/"+(forEnd-1));
 
         Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
         btn_save.setOnClickListener(new View.OnClickListener() {
@@ -416,7 +416,7 @@ public class QuestionActivity extends AppCompatActivity {
                     databaseManager.UpdateStatus(questId, 0);
                 }
 
-                finish();
+               finish();
 
             }
         });

@@ -45,7 +45,7 @@ public class ScannerActivity extends AppCompatActivity implements ScannerView.Sc
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
-       /* switch (databaseManager.getQuest(questId).getIcon()) {
+        /*switch (databaseManager.getQuest(questId).getIcon()) {
             case "quest":
                 actionBar.setIcon(R.mipmap.icon_question);
                 break;
@@ -128,6 +128,7 @@ public class ScannerActivity extends AppCompatActivity implements ScannerView.Sc
 
             toCorrect();
         }else {
+            Toast.makeText(ScannerActivity.this, "รหัสไม่ตรงกับเควสนี้", Toast.LENGTH_LONG).show();
             scanner.startScanner();
         }
 
@@ -163,7 +164,7 @@ public class ScannerActivity extends AppCompatActivity implements ScannerView.Sc
         }
 
         TextView text_status = (TextView) dialog.findViewById(R.id.status_question);
-        text_status.setText("YOUR STATUS : CORRECT");
+        text_status.setText("คุณได้ผ่านเควสนี้แล้ว");
 
         Button btn_save = (Button) dialog.findViewById(R.id.btn_save);
         btn_save.setOnClickListener(new View.OnClickListener() {
