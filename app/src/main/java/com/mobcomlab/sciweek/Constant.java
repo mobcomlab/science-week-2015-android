@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks;
+package com.mobcomlab.sciweek;
 
 public class Constant {
 

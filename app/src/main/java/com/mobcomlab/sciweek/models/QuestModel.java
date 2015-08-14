@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.models;
+package com.mobcomlab.sciweek.models;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

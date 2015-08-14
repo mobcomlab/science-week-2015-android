@@ -1,9 +1,9 @@
-package com.example.sanuphap.scienceweeks.managers;
+package com.mobcomlab.sciweek.managers;
 
 import android.content.Context;
 
 
-import com.example.sanuphap.scienceweeks.models.QuestModel;
+import com.mobcomlab.sciweek.models.QuestModel;
 
 import java.util.List;
 

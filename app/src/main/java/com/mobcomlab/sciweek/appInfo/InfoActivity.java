@@ -1,18 +1,13 @@
-package com.example.sanuphap.scienceweeks.appInfo;
+package com.mobcomlab.sciweek.appInfo;
 
-import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-import com.example.sanuphap.scienceweeks.Constant;
-import com.example.sanuphap.scienceweeks.R;
-
-import java.net.URI;
-import java.net.URL;
+import com.mobcomlab.sciweek.Constant;
+import com.mobcomlab.sciweek.R;
 
 public class InfoActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.uiQuestion;
+package com.mobcomlab.sciweek.uiQuestion;
 
 
 import android.app.Dialog;
@@ -13,9 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sanuphap.scienceweeks.R;
-import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
-import com.example.sanuphap.scienceweeks.models.QuestContents;
+import com.mobcomlab.sciweek.R;
+import com.mobcomlab.sciweek.managers.DatabaseManager;
+import com.mobcomlab.sciweek.models.QuestContents;
 
 import java.util.Random;
 

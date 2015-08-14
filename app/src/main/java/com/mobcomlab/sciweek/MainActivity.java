@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks;
+package com.mobcomlab.sciweek;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,14 +14,14 @@ import android.view.MenuItem;
 
 
 import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
-import com.example.sanuphap.scienceweeks.adapter.QuestAdapter;
-import com.example.sanuphap.scienceweeks.appInfo.InfoActivity;
-import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
-import com.example.sanuphap.scienceweeks.managers.WebServiceCallbackListener;
-import com.example.sanuphap.scienceweeks.managers.WebServiceManager;
-import com.example.sanuphap.scienceweeks.models.QuestContents;
-import com.example.sanuphap.scienceweeks.models.QuestModel;
-import com.example.sanuphap.scienceweeks.uiAbout.AboutmeActivity;
+import com.mobcomlab.sciweek.adapter.QuestAdapter;
+import com.mobcomlab.sciweek.appInfo.InfoActivity;
+import com.mobcomlab.sciweek.managers.DatabaseManager;
+import com.mobcomlab.sciweek.managers.WebServiceCallbackListener;
+import com.mobcomlab.sciweek.managers.WebServiceManager;
+import com.mobcomlab.sciweek.models.QuestContents;
+import com.mobcomlab.sciweek.models.QuestModel;
+import com.mobcomlab.sciweek.uiAbout.AboutmeActivity;
 
 import java.util.List;
 

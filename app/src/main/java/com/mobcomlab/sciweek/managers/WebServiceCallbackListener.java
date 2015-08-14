@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.managers;
+package com.mobcomlab.sciweek.managers;
 
 public interface WebServiceCallbackListener {
     void onWebServiceCallback();

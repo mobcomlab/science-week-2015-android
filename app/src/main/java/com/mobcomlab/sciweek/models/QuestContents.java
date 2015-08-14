@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.models;
+package com.mobcomlab.sciweek.models;
 
 /**
  * Created by sAnuphap on 26/7/2558.

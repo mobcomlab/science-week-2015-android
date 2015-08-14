@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks;
+package com.mobcomlab.sciweek.sciweek;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

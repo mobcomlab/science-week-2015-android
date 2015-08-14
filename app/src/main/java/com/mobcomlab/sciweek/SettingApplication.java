@@ -1,10 +1,10 @@
-package com.example.sanuphap.scienceweeks;
+package com.mobcomlab.sciweek.sciweek;
 
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
+import com.mobcomlab.sciweek.managers.DatabaseManager;
 
 
 /**

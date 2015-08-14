@@ -4,7 +4,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
-    tools:context="com.example.sanuphap.scienceweeks.uiScanner.ScannerActivity">
+    tools:context="com.mobcomlab.sciweek.sciweek.uiScanner.ScannerActivity">
 
     <FrameLayout
         android:id="@+id/scanner_fragment"

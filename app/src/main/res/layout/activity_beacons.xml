@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sanuphap.scienceweeks.uiBeacon.BeaconActivity"
+    tools:context="com.mobcomlab.sciweek.sciweek.uiBeacon.BeaconActivity"
     android:gravity="center_horizontal">
 
     <TextView

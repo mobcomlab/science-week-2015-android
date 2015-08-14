@@ -1,12 +1,9 @@
-package com.example.sanuphap.scienceweeks.uiAbout;
+package com.mobcomlab.sciweek.uiAbout;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
 
-import com.example.sanuphap.scienceweeks.R;
+import com.mobcomlab.sciweek.R;
 
 public class AboutmeActivity extends ActionBarActivity {
 

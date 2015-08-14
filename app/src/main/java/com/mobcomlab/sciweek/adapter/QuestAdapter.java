@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.adapter;
+package com.mobcomlab.sciweek.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.sanuphap.scienceweeks.MainActivity;
-import com.example.sanuphap.scienceweeks.R;
+import com.mobcomlab.sciweek.MainActivity;
+import com.mobcomlab.sciweek.R;
 
-import com.example.sanuphap.scienceweeks.models.QuestContents;
-import com.example.sanuphap.scienceweeks.models.QuestModel;
-import com.example.sanuphap.scienceweeks.uiBeacon.BeaconActivity;
-import com.example.sanuphap.scienceweeks.uiQuestion.QuestionActivity;
-import com.example.sanuphap.scienceweeks.uiScanner.ScannerActivity;
+import com.mobcomlab.sciweek.models.QuestContents;
+import com.mobcomlab.sciweek.models.QuestModel;
+import com.mobcomlab.sciweek.uiBeacon.BeaconActivity;
+import com.mobcomlab.sciweek.uiQuestion.QuestionActivity;
+import com.mobcomlab.sciweek.uiScanner.ScannerActivity;
 
 import java.util.List;
 

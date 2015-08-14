@@ -1,4 +1,4 @@
-package com.example.sanuphap.scienceweeks.uiScanner;
+package com.mobcomlab.sciweek.uiScanner;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,9 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.sanuphap.scienceweeks.R;
-import com.example.sanuphap.scienceweeks.managers.DatabaseManager;
-import com.example.sanuphap.scienceweeks.models.QuestContents;
+import com.mobcomlab.sciweek.R;
+import com.mobcomlab.sciweek.managers.DatabaseManager;
+import com.mobcomlab.sciweek.models.QuestContents;
 
 import eu.livotov.zxscan.ScannerFragment;
 import eu.livotov.zxscan.ScannerView;
