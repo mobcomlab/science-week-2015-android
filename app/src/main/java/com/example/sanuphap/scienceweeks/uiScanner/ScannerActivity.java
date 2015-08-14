@@ -172,7 +172,7 @@ public class ScannerActivity extends AppCompatActivity implements ScannerView.Sc
             public void onClick(View v) {
 
                 databaseManager.UpdateStatus(questId, 1);
-                Toast.makeText(ScannerActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+                Toast.makeText(ScannerActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_SHORT).show();
 
 
                 finish();
@@ -188,7 +188,7 @@ public class ScannerActivity extends AppCompatActivity implements ScannerView.Sc
                 ScannerView scanner = scannerFragment.getScanner();
 
                 dialog.dismiss();
-                Toast.makeText(ScannerActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                Toast.makeText(ScannerActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_SHORT).show();
                 scanner.startScanner();
 
             }

@@ -1,5 +1,6 @@
 package com.example.sanuphap.scienceweeks.appInfo;
 
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,9 @@ import android.webkit.WebView;
 import com.example.sanuphap.scienceweeks.Constant;
 import com.example.sanuphap.scienceweeks.R;
 
+import java.net.URI;
+import java.net.URL;
+
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +23,7 @@ public class InfoActivity extends AppCompatActivity {
 
         setTitle("ข้อมูลแนะนำ");
 
-        String url = Constant.WebServiceBaseURL + "info";
+        String url = Constant.WebServiceBaseURL + "info/";
         
 
         WebView view =(WebView) this.findViewById(R.id.webInfo);

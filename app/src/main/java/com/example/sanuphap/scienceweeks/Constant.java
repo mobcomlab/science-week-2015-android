@@ -4,6 +4,6 @@ public class Constant {
 
 
     //public static final String WebServiceBaseURL = "http://sciweek.mobcomlab.com/";
-    public static final String WebServiceBaseURL = "http://192.168.215.1:8888/";
+    public static final String WebServiceBaseURL = "http://mcl-sciweek.s3-website-ap-southeast-1.amazonaws.com/";
 
 }

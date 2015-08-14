@@ -409,10 +409,10 @@ public class QuestionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (score >= (forEnd / 2)) {
                     databaseManager.UpdateStatus(questId, 1);
-                    Toast.makeText(QuestionActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuestionActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(QuestionActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuestionActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_SHORT).show();
                     databaseManager.UpdateStatus(questId, 0);
                 }
 

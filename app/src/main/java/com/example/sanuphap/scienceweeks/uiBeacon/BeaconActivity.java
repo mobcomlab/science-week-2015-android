@@ -182,12 +182,12 @@ public class BeaconActivity extends AppCompatActivity {
                         BeaconDevice getBeacon = beaconDevices.get(0);
 
 
-                        status.setText(String.format("Distance: %s m", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
+                        status.setText(String.format("ระยะทาง: %s เมตร", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
 
 
 
                         if (getBeacon.getUniqueId().equals(array_answer[3])) {
-                            status.setText(String.format("Distance: %s m", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
+                            status.setText(String.format("ระยะทาง: %s เมตร", new DecimalFormat("#.#").format(getBeacon.getAccuracy())));
                             if (getBeacon.getAccuracy() < 3.0) {
                                 circle_a.setImageResource(R.drawable.circle_green);
 
@@ -213,7 +213,7 @@ public class BeaconActivity extends AppCompatActivity {
                                 circle_b.setImageResource(R.drawable.circle_red);
                                 circle_c.setImageResource(R.drawable.circle_red);
 
-                                status.setText("Searching...");
+                                status.setText("กำลังค้นหา...");
                             }
 
 
@@ -347,7 +347,7 @@ public class BeaconActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 databaseManager.UpdateStatus(questId, 1);
-                Toast.makeText(BeaconActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_LONG).show();
+                Toast.makeText(BeaconActivity.this, "บันทึกเรียบร้อย", Toast.LENGTH_SHORT).show();
                 finish();
 
             }
@@ -363,7 +363,7 @@ public class BeaconActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(BeaconActivity.this,BeaconActivity.class);
                 intent.putExtra(QuestContents.QUEST_ID,questId);
-                Toast.makeText(BeaconActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_LONG).show();
+                Toast.makeText(BeaconActivity.this, "คุณยังไม่ผ่านเควส", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
                 startActivity(intent);
                 finish();
