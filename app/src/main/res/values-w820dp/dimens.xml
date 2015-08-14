@@ -12,4 +12,10 @@
 
     <!--page scanner-->
     <dimen name="size_scanner">480dp</dimen>
+
+    <!--page main-low-->
+    <dimen name="size_circle">130dp</dimen>
+    <dimen name="font_main">15dp</dimen>
+    <dimen name="font_main2">18dp</dimen>
+    <dimen name="margin_head">30dp</dimen>
 </resources>
